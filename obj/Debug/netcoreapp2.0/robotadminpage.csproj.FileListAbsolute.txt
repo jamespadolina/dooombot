@@ -8,3 +8,4 @@ C:\Users\gutsmith\Desktop\robotadminpage\obj\Debug\netcoreapp2.0\robotadminpage.
 C:\Users\gutsmith\Desktop\robotadminpage\obj\Debug\netcoreapp2.0\robotadminpage.AssemblyInfo.cs
 C:\Users\gutsmith\Desktop\robotadminpage\obj\Debug\netcoreapp2.0\robotadminpage.dll
 C:\Users\gutsmith\Desktop\robotadminpage\obj\Debug\netcoreapp2.0\robotadminpage.pdb
+C:\Users\gutsmith\Desktop\robotadminpage\obj\Debug\netcoreapp2.0\robotadminpage.csprojResolveAssemblyReference.cache

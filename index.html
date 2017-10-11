@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name='description' content='Content goes here'>
+    <title>Document</title>
+
+    <!-- Google Font - Open Sans -->
+    <link async rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i'
+    />
+
+    <!-- Bootstrap CDN 3.3.7 -->
+    <link async rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'
+    />
+
+    <!-- Custom CSS -->
+    <link rel='stylesheet' href='./css/styles.css'>
+
+    <!-- Angular CDN 1.5.7 -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js'></script>
+
+    <!-- Angular UI Router CDN 0.4.2 -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js'></script>
+
+    <!-- jQuery CDN 3.2.1 -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
+</head>
+<body>
+    <div class="customNav">
+        <ul class="customNavItems">
+            <li><a ui-sref="home">Home</a></li>
+            <li><a ng-if="currentUser != undefined" ui-sref="orderList">Order List</a></li>
+            <li><a ng-if="currentUser != undefined" ui-sref="checkOrders">Check Orders</a></li>
+            <li><a ng-if="currentUser == undefined" ui-sref="adminLogin">Login</a></li>
+                <input class="col-md-2" type="text" placeholder="Password">
+                <input class="col-md-2" type="text" placeholder="User Name">
+        </ul>
+    </div>
+
+        <div ui-view></div>
+<!-- Module -->
+<script type="text/javascript" src="./app.js"></script>
+<!-- Controllers -->
+<script type="text/javascript" src="./controllers/orderListController.js"></script>
+<script type="text/javascript" src="./controllers/indexController.js"></script>
+<script type="text/javascript" src="./controllers/checkOrdersController.js"></script>
+<script type="text/javascript" src="./controllers/adminController.js"></script>
+<!-- Services -->
+<script type="text/javascript" src="./services/orderListService.js"></script>
+<script type="text/javascript" src="./services/checkOrderService.js"></script>
+<script type="text/javascript" src="./services/adminService.js"></script>
+
+
+</body>
+
+</html>
