@@ -1,0 +1,10 @@
+C:\Users\gutsmith\Desktop\robotadminpage\bin\Debug\netcoreapp2.0\robotadminpage.deps.json
+C:\Users\gutsmith\Desktop\robotadminpage\bin\Debug\netcoreapp2.0\robotadminpage.runtimeconfig.json
+C:\Users\gutsmith\Desktop\robotadminpage\bin\Debug\netcoreapp2.0\robotadminpage.runtimeconfig.dev.json
+C:\Users\gutsmith\Desktop\robotadminpage\bin\Debug\netcoreapp2.0\robotadminpage.dll
+C:\Users\gutsmith\Desktop\robotadminpage\bin\Debug\netcoreapp2.0\robotadminpage.pdb
+C:\Users\gutsmith\Desktop\robotadminpage\obj\Debug\netcoreapp2.0\robotadminpage.csproj.CoreCompileInputs.cache
+C:\Users\gutsmith\Desktop\robotadminpage\obj\Debug\netcoreapp2.0\robotadminpage.AssemblyInfoInputs.cache
+C:\Users\gutsmith\Desktop\robotadminpage\obj\Debug\netcoreapp2.0\robotadminpage.AssemblyInfo.cs
+C:\Users\gutsmith\Desktop\robotadminpage\obj\Debug\netcoreapp2.0\robotadminpage.dll
+C:\Users\gutsmith\Desktop\robotadminpage\obj\Debug\netcoreapp2.0\robotadminpage.pdb
