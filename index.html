@@ -43,16 +43,40 @@
             </li>
             <li>
                 <a ng-if="currentUser == undefined" ui-sref="adminLogin">Login</a>
-            </li>
-            <div class="pull-right form-group">
-                <input class="col-md-1" type="text" placeholder="Password">
-            </div>
-            <div class="pull-right form-group">
-                <input class="col-md-1" type="text" placeholder="User Name">
-            </div>
+            </li>           
+        </ul>        
+</div>
 
+    <div class="container">
+    <div class="col-md-8 pull-left">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/aKCieb-Gf2g?rel=0" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <div class="col-md-4 pull-right">
+        <h3><strong>placeholder bot 1</strong></h3>
+        <ul class="botPart">
+            <h4> Bot parts list</h4>
+            <ul>
+                <li>wheel x2</li>
+                <li>wheel mount x2</li>
+                <li>sides x2</li>
+                <li>top x1</li>
+                <li>bottom x1</li>
+                <li>respberry pi 3 b chip x1</li>
+                <li>servos x2</li>
+                <li>ballbearring x1</li>
+                <li>10 pack of long screws x1</li>
+                <li>12 pack of medium screws x1</li>
+                <li>4 pack of short screws x1</li>
+                <li>red wires m/f x3</li>
+                <li>black wires m/f x3</li>
+                <li>white wires m/f x3</li>
+            </ul>
         </ul>
     </div>
+</div>
+
+
 
     <div ui-view></div>
     <!-- Module -->
@@ -62,10 +86,13 @@
     <script type="text/javascript" src="./controllers/indexController.js"></script>
     <script type="text/javascript" src="./controllers/checkOrdersController.js"></script>
     <script type="text/javascript" src="./controllers/adminController.js"></script>
+    <script type="text/javascript" src="./controllers/loginController.js"></script>
+
     <!-- Services -->
     <script type="text/javascript" src="./services/orderListService.js"></script>
     <script type="text/javascript" src="./services/checkOrderService.js"></script>
     <script type="text/javascript" src="./services/adminService.js"></script>
+    <script type="text/javascript" src="./services/loginService.js"></script>
 
 
 </body>
