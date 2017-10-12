@@ -39,14 +39,9 @@ font-family: 'Open Sans', sans-serif;
     display: inline;
   }
 
-  .loginBtn {
-
-  }
-
-  .navUn {
-
-  }
-  
-  .navPw {
-
-  }
+.logo {
+  background: url("images/robologo.jpg");
+  height: 100px;
+  width: auto;
+  padding: 20px 0 0 30px;
+}
