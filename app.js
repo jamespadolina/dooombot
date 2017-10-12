@@ -2,7 +2,7 @@ var app = angular.module("doomBotApp", ["ui.router"])
 
 app.config(function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise("/");
-})
+
 
     $stateProvider.state("app", {
         abstract: true,
@@ -32,3 +32,4 @@ app.config(function($stateProvider, $urlRouterProvider) {
         templateUrl: "./views/order-list.html",
         controller: "orderListController.js"
     })
+})
