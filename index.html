@@ -31,6 +31,7 @@
 
 <body>
     <div class="customNav">
+        <!-- fix logo location and extra white space -->
                     <img class="logo pull-left" src="css/images/robologo.jpg">
         <ul class="customNavItems navbar-right">
 
@@ -44,18 +45,19 @@
                 <a ng-if="currentUser != undefined" ui-sref="checkOrders">Check Orders</a>
             </li>
             <li>
+                <!-- must add error for if admin is not logged in user is unable to navigate pages -->
                 <a ng-if="currentUser == undefined" ui-sref="adminLogin">Login</a>
             </li>
         </ul>
     </div>
 
-
+<!-- move video below about me and try to line it up with the list of parts -->
     <div class="container">        
         <div class="col-md-8 pull-left">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/aKCieb-Gf2g?rel=0" frameborder="0" allowfullscreen></iframe>
         </div>
 
-
+<!-- stretch about me accross the top of the pages -->
         <div class="col-md-4 pull-right">
             <h2>about our company</h2>
             <p><strong>NEEDS TO BE RE WORDED</strong> has accelerated co-creation between companies and has helped create new value. But in order to leverage the
@@ -92,7 +94,7 @@
     </div>
 
 
-
+<!-- fix why links are not navigating you through the pages -->
     <div ui-view></div>
     <!-- Module -->
     <script type="text/javascript" src="./app.js"></script>
