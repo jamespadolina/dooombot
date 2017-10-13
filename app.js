@@ -28,4 +28,15 @@ app.config(function($stateProvider, $urlRouterProvider) {
         templateUrl: "./views/check-order.html",
         controller: "checkOrderController"
     })
+
+    .state("app.orderList", {
+        url: "/orderList",
+        templateUrl: "./views/order-list.html",
+        controller: "orderListController.js"
+    })
+
+    .state("app.login", {
+        url: "/login",
+        templateUrl: "./views/login.html"
+    })
 })
