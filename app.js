@@ -36,11 +36,6 @@ app.config(function($stateProvider, $urlRouterProvider) {
         controller: "checkOrderController"
     })
 
-<<<<<<< HEAD
-   
-
-=======
->>>>>>> 969cd32f7769b4743c2cdc07c73195d9efd4c27f
     .state("app.login", {
         url: "/login",
         templateUrl: "./views/login.html"
