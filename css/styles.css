@@ -40,8 +40,8 @@ font-family: 'Open Sans', sans-serif;
   }
 
 .logo {
-  background: url("images/robologo.jpg");
+  background: url("images/robologo.jpg") no-repeat;
   height: 100px;
   width: auto;
-  padding: 20px 0 0 30px;
+  margin: 20px 0 0 30px;
 }
