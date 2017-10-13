@@ -14,8 +14,12 @@ font-family: 'Open Sans', sans-serif;
 
 .body-site {
   background-image: url("./images/dooomy.jpg") !important;
-  background-size: 1920px 1080px !important;
-  background-repeat: repeat !important;
+  /* background-size: 1920px 1080px !important; */
+  background-repeat: no-repeat !important;
+  -webkit-bacckground-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 /* navbar */
