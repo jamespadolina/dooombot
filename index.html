@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang='en' ng-app="doomBotApp">
 
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <meta name='description' content='Content goes here'>
-    <title>Document</title>
+    <title>DooomBot</title>
 
     <!-- Google Font - Open Sans -->
     <link async rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i'
@@ -29,24 +29,24 @@
 
 </head>
 
-<body>
+<body class="body-site">
     <div class="customNav">
         <!-- fix logo location and extra white space -->
                     <img class="logo pull-left" src="css/images/robologo.jpg">
         <ul class="customNavItems navbar-right">
 
             <li>
-                <a ui-sref="home">Home</a>
+                <a ui-sref="app.home">Home</a>
             </li>
             <li>
-                <a ng-if="currentUser != undefined" ui-sref="orderList">Order List</a>
+                <a ng-if="currentUser != undefined" ui-sref="app.orderList">Order List</a>
             </li>
             <li>
-                <a ng-if="currentUser != undefined" ui-sref="checkOrders">Check Orders</a>
+                <a ng-if="currentUser != undefined" ui-sref="app.checkOrders">Check Orders</a>
             </li>
             <li>
                 <!-- must add error for if admin is not logged in user is unable to navigate pages -->
-                <a ng-if="currentUser == undefined" ui-sref="adminLogin">Login</a>
+                <a ng-if="currentUser == undefined" ui-sref="app.login">Login</a>
             </li>
         </ul>
     </div>
@@ -59,7 +59,7 @@
 
 <!-- stretch about me accross the top of the pages -->
         <div class="col-md-4 pull-right">
-            <h2>about our company</h2>
+            <h2><strong>About our Company</strong></h2>
             <p><strong>NEEDS TO BE RE WORDED</strong> has accelerated co-creation between companies and has helped create new value. But in order to leverage the
                 full potential of IoT, data processing must go beyond cyberspace. New and innovative services in the real
                 world will depend on our ability to combine data with physical operations. That’s why robotics will play
@@ -93,11 +93,22 @@
         </div>
     </div>
 
+    <!-- Footer -->
+
+  <!-- <footer class="fixed-bottom footer">
+    <div class="container">
+        <div class="text-center">
+            <small>Copyright 2017 © DooomBot, Inc.</small>
+        </div>
+    </div>
+  </footer> -->
+
 
 <!-- fix why links are not navigating you through the pages -->
     <div ui-view></div>
     <!-- Module -->
     <script type="text/javascript" src="./app.js"></script>
+
     <!-- Controllers -->
     <script type="text/javascript" src="./controllers/orderListController.js"></script>
     <script type="text/javascript" src="./controllers/indexController.js"></script>
@@ -109,8 +120,6 @@
     <script type="text/javascript" src="./services/orderListService.js"></script>
     <script type="text/javascript" src="./services/checkOrderService.js"></script>
     <script type="text/javascript" src="./services/adminService.js"></script>
-    <script type="text/javascript" src="./services/loginService.js"></script>
-
 
 </body>
 

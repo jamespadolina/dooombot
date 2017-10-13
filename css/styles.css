@@ -10,6 +10,16 @@ font-weight: 400;
 font-family: 'Open Sans', sans-serif;
 }
 
+/* Entire Site */
+
+.body-site {
+  background-image: url("./images/dooomy.jpg") !important;
+  background-size: 1920px 1080px !important;
+  background-repeat: repeat !important;
+}
+
+/* navbar */
+
 .customNav {
     background: url("images/robonav.jpg") no-repeat center center; 
     -webkit-background-size: cover;
@@ -39,9 +49,47 @@ font-family: 'Open Sans', sans-serif;
     display: inline;
   }
 
+  /* logo */
 .logo {
   background: url("images/robologo.jpg");
   height: 100px;
   width: auto;
   padding: 20px 0 0 30px;
+}
+
+/* Footer */
+
+ .footer {
+  margin-top: 100px;
+  color: #fff
+}
+
+ /* Login */
+ .logincontainer {
+  max-width: 400px;
+  box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
+}
+
+.card-header {
+max-width: 600px;
+padding: .75rem 1.25rem;
+margin: 0 auto;
+margin-bottom: 0;
+background-color: rgba(0,0,0,.03);
+border-bottom: 1px solid rgba(0,0,0,.125);
+border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+}
+
+.login-title {
+  max-width: 390px;
+}
+
+.card-body {
+max-width: 400px;
+margin: 0 auto;
+flex: 1 1 auto;
+padding: 1.25rem;
 }

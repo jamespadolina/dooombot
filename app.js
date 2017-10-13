@@ -32,4 +32,9 @@ app.config(function($stateProvider, $urlRouterProvider) {
         templateUrl: "./views/order-list.html",
         controller: "orderListController.js"
     })
+
+    .state("app.login", {
+        url: "/login",
+        templateUrl: "./views/login.html"
+    })
 })
