@@ -111,3 +111,21 @@ padding: 1.25rem;
   text-decoration: size 50px;
   text-align: center;
 }
+
+.orderTxt {
+  color: red;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, .5)
+}
+
+.customerInfo {
+  font-size: 16px;
+  color: red;
+}
+
+.orderTxt {
+  font-size: 16px;
+  color: red;
+}

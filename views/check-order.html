@@ -1,19 +1,31 @@
-<h1 class="text-center checkOrderHero">check order page</h1>
+<!-- need to make another almost identicle order page that will show all the orders for this particular customer/ or use this page and make a second
+page that displays all their past orders.
+overall orders (order number, order date, shipping date) 
+individual orders (order number, bot ordered, quantity ordered, order date, ship date, shipping status ) -->
+<div class="overlay">
+    <div class="customerInfo col-md-6">
+        <p>Customer Name: {{ customer.firstName.id, customer.lastName.id }}</p>
+        <p>Address: {{ customer.address.id }}</p>
+        <p>Phone Number: {{ customer.phone.id }}</p>
+    </div>
 
-<table style="width:100%">
-    <tr>
-        <th>Order Id</th>
-        <th>Bot Ordered</th>
-        <th>Quantity Ordered</th>
-        <th>Shipping Date</th>
-        <th>Shipping Status</th>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>bot 1</td>
-        <td>1</td>
-        <td>10/13/17</td>
-        <td>10/21/17</td>
-        <td>Pending</td>
-    </tr>
-</table>
+    <table class="orderTxt pull-right" style="width:50%">
+        <tr>
+            <th>Order Id</th>
+            <th>Bot Ordered</th>
+            <th>Quantity Ordered</th>
+            <th>Order Date</th>
+            <th>Shipping Date</th>
+            <th>Shipping Status</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>bot 1</td>
+            <td>1</td>
+            <td>10/13/17</td>
+            <td>10/21/17</td>
+            <td>Pending</td>
+        </tr>
+    </table>
+</div>
