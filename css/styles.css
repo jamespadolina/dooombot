@@ -93,3 +93,17 @@ margin: 0 auto;
 flex: 1 1 auto;
 padding: 1.25rem;
 }
+
+.about {
+  color: red;
+}
+
+.video {
+  margin: 50px 0 0 0;
+}
+
+.moreBots {
+  color: red;
+  text-decoration: size 50px;
+  text-align: center;
+}
