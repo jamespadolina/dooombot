@@ -38,14 +38,17 @@
             <li>
                 <a ui-sref="app.home">Home</a>
             </li>
+
             <li>
                 <!-- ng-if="currentUser != undefined" -->
                 <a  ui-sref="app.orderList">Order List</a>
             </li>
+
             <li>
                 <!-- ng-if="currentUser != undefined" -->
                 <a  ui-sref="app.checkOrder">Check Orders</a>
             </li>
+
             <li>
                 <!-- must add error for if admin is not logged in user is unable to navigate pages -->
                 <a ng-if="currentUser == undefined" ui-sref="app.login">Login</a>
@@ -54,10 +57,6 @@
         
     </div>
 
-<!-- move video below about me and try to line it up with the list of parts -->
-
-<!-- stretch about me accross the top of the pages -->
-        
 
     <!-- Footer -->
 
