@@ -13,7 +13,7 @@ font-family: 'Open Sans', sans-serif;
 /* Entire Site */
 
 .body-site {
-  background-image: url("./images/dooomy.jpg") !important;
+  background-image: url("./images/dooombg.jpg") !important;
   /* background-size: 1920px 1080px !important; */
   background-repeat: no-repeat !important;
   -webkit-bacckground-size: cover;
@@ -99,7 +99,7 @@ padding: 1.25rem;
 }
 
 .about {
-  color: red;
+  color: white;
 }
 
 .video {
@@ -107,7 +107,14 @@ padding: 1.25rem;
 }
 
 .moreBots {
-  color: red;
+  color: white;
   text-decoration: size 50px;
   text-align: center;
 }
+
+.overlay {
+  background: rgba(0, 0, 0, .5)
+}
+
+/* table order-list */
+

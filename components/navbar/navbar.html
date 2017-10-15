@@ -1,0 +1,32 @@
+<div class="customNav">
+    <!-- fix logo location and extra white space -->
+                <img class="logo pull-left" src="css/images/robologo.png">
+    <ul class="customNavItems navbar-right">
+
+        <li>
+            <a ui-sref="app.home">Home</a>
+        </li>
+
+        <li>
+            <!-- ng-if="currentUser != undefined" -->
+            <a  ui-sref="app.orderList">Order List</a>
+        </li>
+
+        <li>
+            <!-- ng-if="currentUser != undefined" -->
+            <a  ui-sref="app.checkOrder">Check Orders</a>
+        </li>
+
+        <li>
+            <!-- ng-if="currentUser != undefined" -->
+            <a ui-sref="app.admin">Account</a>
+        </li>
+
+        <li>
+            <!-- must add error for if admin is not logged in user is unable to navigate pages -->
+            <a ng-if="currentUser == undefined" ui-sref="app.login">Login</a>
+        </li>
+        <li><a ng-if="currentUser != undefined" ng-click="logout()">Logout</a></li>
+    </ul>
+    
+</div>

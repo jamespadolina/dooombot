@@ -24,9 +24,9 @@ app.config(function($stateProvider, $urlRouterProvider) {
         controller: "orderListController"
     })
 
-    .state("app.admin", {
-        url: "/admin",
-        templateUrl: "./views/admin.html",
+    .state("app.account", {
+        url: "/account",
+        templateUrl: "./views/account.html",
         controller: "adminController"
     })
 
@@ -38,6 +38,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
     .state("app.login", {
         url: "/login",
-        templateUrl: "./views/login.html"
+        templateUrl: "./views/login.html",
+        controller: "loginController"
     })
 })
