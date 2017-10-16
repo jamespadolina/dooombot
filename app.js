@@ -40,4 +40,5 @@ app.config(function($stateProvider, $urlRouterProvider) {
         templateUrl: "./views/login.html",
         controller: "loginController"
     })
+
 })
