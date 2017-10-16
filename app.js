@@ -34,6 +34,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
         templateUrl: "./views/check-order.html",
         controller: "checkOrderController"
     })
+    .state("app.showCustomer", {
+        url: "/checkOrder/:id",
+        templateUrl: "./views/check-order.html",
+        controller: "checkOrderController"
+    })
 
     .state("app.login", {
         url: "/login",
@@ -41,4 +46,9 @@ app.config(function($stateProvider, $urlRouterProvider) {
         controller: "loginController"
     })
 
+    .state("app.single", {
+        url: "/single",
+        templateUrl: "./views/single.html",
+        controller: "singleController"
+    })
 })

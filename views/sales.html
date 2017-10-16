@@ -11,7 +11,7 @@
                 <th>Shipping Status</th>
             </tr>
             <tr>
-                <td ui-sref="app.checkOrder">{{sale.userID}}</td>
+                <td ng-click="goToUser(sale.userID)">{{sale.userID}}</td>
                 <td>{{sale.createdAt | date : 'MM/dd/yyyy'}}</td>
                 <td>{{sale.qty}}</td>
                 <td>{{sale.status}}</td>
