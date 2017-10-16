@@ -30,30 +30,6 @@
 </head>
 
 <body class="body-site">
-    <div class="customNav">
-        <!-- fix logo location and extra white space -->
-        <img class="logo pull-left" src="css/images/robologo.png">
-        <ul class="customNavItems navbar-right">
-            <li>
-                <a ui-sref="app.about">About</a>
-            </li>
-            <li>
-                <!-- ng-if="currentUser != undefined" -->
-                <a ui-sref="app.orderList">Order List</a>
-            </li>
-            <li>
-                <!-- ng-if="currentUser != undefined" -->
-                <a ui-sref="app.checkOrder">Check Orders</a>
-            </li>
-            <li>
-                <a ng-if="currentUser != undefined" ui-sref="app.account">Account</a>
-            </li>
-            <li>
-                <!-- must add error for if admin is not logged in user is unable to navigate pages -->
-                <a ng-if="currentUser == undefined" ui-sref="app.login">Login</a>
-            </li>
-        </ul>
-    </div>
 
     <div ui-view></div>
 
@@ -68,7 +44,7 @@
 
 
     <!-- fix why links are not navigating you through the pages -->
-  
+
     <!-- Module -->
     <script type="text/javascript" src="./app.js"></script>
 
@@ -83,11 +59,10 @@
     <!-- Services -->
     <script type="text/javascript" src="./services/salesService.js"></script>
     <script type="text/javascript" src="./services/checkOrderService.js"></script>
-    <script type="text/javascript" src="./services/adminService.js"></script>
     <script type="text/javascript" src="./services/userService.js"></script>
 
     <!--Components -->
-  <!-- <script type="text/javascript" src="./components/navbar/navbar.js"></script> -->
+    <script type="text/javascript" src="./components/navbar/navbar.js"></script>
 
 </body>
 
