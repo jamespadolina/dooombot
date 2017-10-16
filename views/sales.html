@@ -1,24 +1,37 @@
-<div class="container overlay"  style="color: white; font-weight: bold">
-    <h1 class="text-center"><strong>Sales List</strong></h1>
-<table style="width:100%">
-  <tr>
-      <th>Customer</th>
-      <th>Bot Name</th>
-      <th>Order Date</th>
-      <th>Shipping Date</th>
-      <th>Shipping Status</th>
-  </tr>
-  <tr>
-      <td>1</td>
-      <td>bot 1</td>
-      <td>1</td>
-      <td>10/13/17</td>
-      <td>10/21/17</td>
-  </tr>
+<div class="container overlay" style="color: white; font-weight: bold">
+    <div>
+        <h1 class="text-center">
+            <strong>Sales List</strong>
+        </h1>
+        <table ng-repeat="sale in sales"style="width:100%">
+            <tr>
+                <th>Customer ID</th>
+                <th>Order Date</th>
+                <th>Quantity</th>
+                <th>Shipping Status</th>
+            </tr>
+            <tr>
+                <td>{{sale.userID}}</td>
+                <td>{{sale.createdAt | date : 'MM/dd/yyyy'}}</td>
+                <td>{{sale.qty}}</td>
+                <td>{{sale.status}}</td>
+            </tr>
+        </table>
+    </div>
 
-  <tr>
-      <td>Dooombots</td>
-      <td>Orders to date</td>
-  </tr>
-</table>
-</div> 
+    <div class="toDate">
+        <h1 class="text-center">
+            <strong>Sales to Date</strong>
+        </h1>
+        <table style="width:50%">
+            <tr>
+                <td>Dooombots</td>
+                <td>Orders to date</td>
+            </tr>
+            <tr>
+                <td>bot 1</td>
+                <td>100 units</td>
+            </tr>
+        </table>
+    </div>
+</div>
