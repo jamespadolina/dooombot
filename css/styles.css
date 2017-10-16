@@ -58,7 +58,7 @@ font-family: 'Open Sans', sans-serif;
   background: url("images/robologo.png") no-repeat;
   height: 100px;
   width: auto;
-  padding: 20px 0 0 30px;
+  margin: 20px 0 0 30px;
 }
 
 /* Footer */
@@ -128,4 +128,17 @@ padding: 1.25rem;
 .orderTxt {
   font-size: 16px;
   color: red;
+}
+
+.toDate {
+  padding: 100px 0 0 0;
+}
+
+.company1 {
+  font-size: 50px;
+  padding: 30px 0 0 450px;
+}
+
+.company2 {
+  padding: 0 0 0 550px;
 }
