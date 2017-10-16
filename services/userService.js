@@ -13,4 +13,11 @@ angular
     this.setCurrentUser = function (user) {
       _currentUser = user;
     }
+
+    this.getUsers = function() {
+      return $http.get(`http://192.168.120.7:3000/users`);
+    }
+
+    
+
   })

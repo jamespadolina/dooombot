@@ -55,7 +55,7 @@ font-family: 'Open Sans', sans-serif;
 
   /* logo */
 .logo {
-  background: url("images/robologo.jpg") no-repeat;
+  background: url("images/robologo.png") no-repeat;
   height: 100px;
   width: auto;
   padding: 20px 0 0 30px;

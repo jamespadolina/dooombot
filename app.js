@@ -2,7 +2,7 @@ var app = angular.module("doomBotApp", ["ui.router"])
 
 app.config(function($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise("/");
+    $urlRouterProvider.otherwise("/login");
 
 
     $stateProvider
@@ -12,16 +12,15 @@ app.config(function($stateProvider, $urlRouterProvider) {
         templateUrl: './views/app-container.html'
     })
 
-    .state("app.home", {
-        url: '/home',
-        templateUrl: './views/home.html',
-        controller: "homeController"
+    .state("app.about", {
+        url: '/about',
+        templateUrl: './views/about.html',
     })
 
     .state("app.orderList", {
-        url: "/orderList",
+        url: "/sales",
         templateUrl: "./views/order-list.html",
-        controller: "orderListController"
+        controller: "salesController"
     })
 
     .state("app.account", {
