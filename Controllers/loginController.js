@@ -17,7 +17,7 @@ angular
         console.log("Username or password is empty");
       }
       else if ($scope.username == "admin" && $scope.password == "admin") {
-
+      $state.transitionTo("app.sales", null, {reload: true});
       }
 
       else {
