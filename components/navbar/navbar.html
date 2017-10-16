@@ -10,17 +10,15 @@
             <!-- ng-if="currentUser != undefined" -->
             <a ui-sref="app.sales">Sales</a>
         </li>
-        <li>
-            <!-- ng-if="currentUser != undefined" -->
-            <a ui-sref="app.checkOrder">Check Orders</a>
-        </li>
+        
         <li>
             <a ng-if="currentUser != undefined" ui-sref="app.account">Account</a>
         </li>
         <li>
             <!-- must add error for if admin is not logged in user is unable to navigate pages -->
-            <a ui-sref="app.login">Login</a>
+            <a  ui-sref="app.login">Login</a>
         </li>
+        <li ng-if="currentUser != undefined" ng-click="logout()" >logout</li>
     </ul>
     <div >
         <h1 class="company1 text-center">Doombot</h1>

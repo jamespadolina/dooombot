@@ -1,6 +1,6 @@
 angular
   .module("doomBotApp")
-  .controller("loginController", function ($scope, $state, userService, adminService) {
+  .controller("loginController", function ($scope, $state, userService) {
 
     userService.getUsers()
       .then(function (response) {
@@ -11,16 +11,17 @@ angular
       })
 
     $scope.login = function () {
-      adminService.getAdminUserPass($scope.userName, $scope.pass, function (admin) {
-      $scope.admin = admin;
-        console.log($scope.admin)
-      })
 
-      if ($scope.admin != undefined) {
-        $state.transitionTo("app.sales", {id: $scope.admin.id}, {reload: true});
-        userService.setCurrentUser($scope.admin);
-      } else {
-        alert("Username or Password is incorrect! Please try again!")
+      if (!$scope.username || !$scope.password) {
+
+        console.log("Username or password is empty");
+      }
+      else if ($scope.username == "admin" && $scope.password == "admin") {
+
+      }
+
+      else {
+
       }
 
     }

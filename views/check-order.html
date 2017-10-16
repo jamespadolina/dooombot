@@ -3,29 +3,28 @@ page that displays all their past orders.
 overall orders (order number, order date, shipping date) 
 individual orders (order number, bot ordered, quantity ordered, order date, ship date, shipping status ) -->
 <div class="overlay">
-    <div class="customerInfo col-md-6" style="color: white; font-weight: bold">
-        <p>Customer Name: {{  }}</p>
-        <p>Address: {{ }}</p>
-        <p>Phone Number: {{ }}</p>
+    <div ng-repeat="user in users | limitTo: 1"  class="customerInfo col-md-6" style="color: white; font-weight: bold">
+        <p>First Name: {{user.firstName}}</p>
+        <p>Last Name: {{user.lastName}}</p>
+        <p>Address: {{user.address1}}</p>
+        <p>Email: {{user.emailAddress}}</p>
     </div>
 
-    <table  class="orderTxt pull-right" style="width:50%">
+    <table  ng-repeat="bot in bots" class="orderTxt pull-right" style="width:50%">
         <tr>
             <th>Order Id</th>
             <th>Bot Ordered</th>
             <th>Quantity Ordered</th>
             <th>Order Date</th>
-            <th>Shipping Date</th>
             <th>Shipping Status</th>
         </tr>
 
         <tr>
-            <td>1</td>
-            <td>bot 1</td>
-            <td>1</td>
-            <td>10/13/17</td>
-            <td>10/21/17</td>
-            <td>Pending</td>
+            <td>{{bot.id}}</td>
+            <td>{{bot.name}}</td>
+            <td>{{bot.quantity}}</td>
+            <td>{{bot.createdAt | date: 'MM/dd/yyyy'}}</td>
+            <td>{{bot.updatedAt  | date: 'MM/dd/yyyy'}}</td>
         </tr>
     </table>
 </div>
