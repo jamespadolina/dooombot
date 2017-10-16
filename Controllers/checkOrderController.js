@@ -5,6 +5,8 @@ angular
         $scope.userID = $stateParams.id;
         console.log($scope.userID);
 
+        $scope.transactions = [];
+
         checkOrderService.getBots().then(function (response) {
             $scope.bots = response.data;
             console.log($scope.bots);
@@ -25,8 +27,16 @@ angular
             .then(function(response) {
                 $scope.sales = response.data;
                 console.log($scope.sales);
+                for(var i = 0; i < $scope.sales.length; i++) {
+                    if($scope.sales[i].userID == $scope.userID) {
+                        $scope.transactions.push($scope.sales[i]);
+                    }
+                }
+                console.log($scope.transactions);
             }, function(error) {
                 console.log(error);
             })
+
+        
 
     })

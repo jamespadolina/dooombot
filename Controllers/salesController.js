@@ -23,6 +23,4 @@ $scope.goToUser = function(userID) {
   $state.go("app.showCustomer", {id: userID})
 }
 
-
-
 })
