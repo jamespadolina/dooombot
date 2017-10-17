@@ -1,9 +1,9 @@
-<div class="container overlay" style="color: white; font-weight: bold">
+<div class="content container-fluid overlay" style="color: white; font-weight: bold">
     <div>
         <h1 class="text-center">
             <strong>Sales List</strong>
         </h1>
-        <table ng-repeat="sale in sales"style="width:100%">
+        <table class="table table-inverse" ng-repeat="sale in sales"style="width:100%">
             <tr>
                 <th>Customer ID</th>
                 <th>Customer Name</th>
@@ -13,7 +13,7 @@
             </tr>
             <tr>
                 <td ng-click="goToUser(sale.userID)">{{sale.userID}}</td>
-                <td>{{sale.userName}}</td>
+                <td ng-repeat="user in users" ng-if="user.id==sale.userID">{{user.firstName}} {{user.lastName}}</td>
                 <td>{{sale.createdAt | date : 'MM/dd/yyyy'}}</td>
                 <td>{{sale.qty}}</td>
                 <td>{{sale.status}}</td>
@@ -23,16 +23,16 @@
 
     <div class="toDate">
         <h1 class="text-center">
-            <strong>Sales to Date</strong>
+            <strong>Sales Analytics</strong>
         </h1>
-        <table style="width:50%">
+        <table class="table">
             <tr>
-                <td>Dooombots</td>
-                <td>Orders to date</td>
+                <td>Total Units Sold</td>
+                <td>Total Orders</td>
             </tr>
             <tr>
-                <td>bot 1</td>
-                <td>100 units</td>
+                <td>{{bots.length}}</td>
+                <td>{{sales.length}}</td>
             </tr>
         </table>
     </div>

@@ -4,7 +4,6 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
     $urlRouterProvider.otherwise("/login");
 
-
     $stateProvider
     .state("app", {
         abstract: true,
@@ -23,17 +22,12 @@ app.config(function($stateProvider, $urlRouterProvider) {
         controller: "salesController"
     })
 
-    .state("app.account", {
-        url: "/account",
-        templateUrl: "./views/account.html",
-        controller: "adminController"
-    })
-
     .state("app.checkOrder", {
         url: "/checkOrder",
         templateUrl: "./views/check-order.html",
         controller: "checkOrderController"
     })
+
     .state("app.showCustomer", {
         url: "/checkOrder/:id",
         templateUrl: "./views/check-order.html",
@@ -46,8 +40,14 @@ app.config(function($stateProvider, $urlRouterProvider) {
         controller: "loginController"
     })
 
+    .state("app.bots", {
+        url: "/single/",
+        templateUrl: "./views/single.html",
+        controller: "singleController"
+    })
+
     .state("app.single", {
-        url: "/single",
+        url: "/single/:id",
         templateUrl: "./views/single.html",
         controller: "singleController"
     })
