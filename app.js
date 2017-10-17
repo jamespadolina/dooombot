@@ -57,4 +57,5 @@ app.config(function($stateProvider, $urlRouterProvider) {
         templateUrl: "./views/store.html",
         controller: "storeController"
     })
+
 })
