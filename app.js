@@ -51,4 +51,10 @@ app.config(function($stateProvider, $urlRouterProvider) {
         templateUrl: "./views/single.html",
         controller: "singleController"
     })
+
+    .state("app.store", {
+        url: "/store/",
+        templateUrl: "./views/store.html",
+        controller: "storeController"
+    })
 })

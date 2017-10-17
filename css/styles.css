@@ -100,6 +100,7 @@ padding: 1.25rem;
 
 .video {
   margin: 50px 0 0 0;
+  padding: 0;
 }
 
 .moreBots {
@@ -133,7 +134,8 @@ padding: 1.25rem;
 
 .heading {
  margin: 0 auto;
- padding: 30px;
+ padding: 20px 0 0 0;
+ margin: 0 35% 0 35%;
  font-size: 50px;
  color: rgb(43, 124, 158);
  letter-spacing: .15em;
