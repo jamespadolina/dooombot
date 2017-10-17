@@ -12,7 +12,7 @@
                 <th>Shipping Status</th>
             </tr>
             <tr>
-                <td ng-click="goToUser(sale.userID)">{{sale.userID}}</td>
+                <td ng-click="goToUser(sale.userID)" style="cursor: pointer">{{sale.userID}}</td>
                 <td ng-repeat="user in users" ng-if="user.id==sale.userID">{{user.firstName}} {{user.lastName}}</td>
                 <td>{{sale.createdAt | date : 'MM/dd/yyyy'}}</td>
                 <td>{{sale.qty}}</td>

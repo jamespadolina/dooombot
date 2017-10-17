@@ -32,7 +32,7 @@
         </thead>
         <tbody>
             <tr class="table table-inverse">
-                <td ng-click="botList(transaction)">{{transaction.id}}</td>
+                <td ng-click="botList(transaction)" style="cursor: pointer">{{transaction.id}}</td>
                 <td ng-show="saleinfo" >{{transaction.qty}}</td>
                 <td ng-show="updatesale"><input class="form-control" ng-model="transaction.qty" /></td>
                 <td ng-show="saleinfo" >{{transaction.total_cost | currency}}</td>

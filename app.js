@@ -16,6 +16,18 @@ app.config(function($stateProvider, $urlRouterProvider) {
         templateUrl: './views/about.html',
     })
 
+    .state("app.create", {
+        url: "/create",
+        templateUrl: "./views/create.html",
+        controller: "createController"
+    })
+
+    .state("app.editProfile", {
+        url: "/create/:id",
+        templateUrl: "./views/create.html",
+        controller: "createController"
+    })
+
     .state("app.sales", {
         url: "/sales",
         templateUrl: "./views/sales.html",
@@ -50,5 +62,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
         url: "/single/:id",
         templateUrl: "./views/single.html",
         controller: "singleController"
+    })
+
+    .state("app.viewProfile", {
+        url: "/profile/:id",
+        templateUrl: "./views/profile.html",
+        controller:"profileController"
     })
 })
