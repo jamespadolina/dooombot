@@ -64,9 +64,16 @@ app.config(function($stateProvider, $urlRouterProvider) {
         controller: "singleController"
     })
 
+<<<<<<< HEAD
     .state("app.viewProfile", {
         url: "/profile/:id",
         templateUrl: "./views/profile.html",
         controller:"profileController"
+=======
+    .state("app.store", {
+        url: "/store/",
+        templateUrl: "./views/store.html",
+        controller: "storeController"
+>>>>>>> eeb7de278f67faf3ee06806aef7889e88f3b1599
     })
 })

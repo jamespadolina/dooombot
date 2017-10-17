@@ -13,3 +13,4 @@ this.updateSale = function(sale) {
 }
 
 })
+

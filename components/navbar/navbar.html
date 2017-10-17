@@ -9,6 +9,12 @@
             <a ng-if="admin == true" ui-sref="app.sales">Sales</a>
         </li>
         <li>
+            <a ui-sref="app.store">Store</a>
+        </li>
+        <li>
+            <a ng-if="currentUser == true" ui-sref="app.sales">Sales</a>
+        </li>
+        <li>
             <a ng-if="currentUser != null" ng-click="viewProfile">Profile</a>
         </li>
         <li>
