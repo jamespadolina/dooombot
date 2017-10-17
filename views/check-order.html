@@ -2,27 +2,36 @@
 page that displays all their past orders.
 overall orders (order number, order date, shipping date) 
 individual orders (order number, bot ordered, quantity ordered, order date, ship date, shipping status ) -->
-<div class="overlay">
-    <div ng-repeat="user in users" ng-if="user.id == userID"class="customerInfo col-md-6" style="color: white; font-weight: bold">
-        <p>First Name: {{user.firstName}}</p>
-        <p>Last Name: {{user.lastName}}</p>
-        <p>Address: {{user.address1}}</p>
-        <p>Email: {{user.emailAddress}}</p>
+<div class="container">
+    <div class="overlay">
+        <div ng-repeat="user in users" ng-if="user.id == userID" class="customerInfo col-md-6" style="color: white; font-weight: bold">
+            <p>First Name: {{user.firstName}}</p>
+            <input class="form-control" ng-model="user.firstName" />
+            <p>Last Name: {{user.lastName}}</p>
+            <input class="form-control" ng-model="user.lastName" />
+            <p>Address: {{user.address1}}</p>
+            <input class="form-control" ng-model="user.address1" />
+            <p>Address: {{user.address2}}</p>
+            <input class="form-control" ng-model="user.address2" />
+            <p>Email: {{user.emailAddress}}</p>
+            <input class="form-control" ng-model="user.emailAddress" />
+            <button class="btn btn-sm btn-primary">Update</button>
+            <button class="btn btn-sm btn-info">Save</button>
+        </div>
 
-
-        <table ng-repeat="bot in bots" ng-if="user.id"class="orderTxt pull-right" style="width:50%">
+        <table ng-repeat="transaction in transactions" class="orderTxt pull-right" style="width:50%">
             <tr>
                 <th>Order Id</th>
-                <th>Bot Ordered</th>
-                <th>Order Date</th>
+                <th>Quantity</th>
+                <th>Total Cost</th>
                 <th>Shipping Status</th>
             </tr>
 
             <tr>
-                <td>{{bot.id}}</td>
-                <td>{{bot.name}}</td>
-                <td>{{bot.createdAt | date: 'MM/dd/yyyy'}}</td>
-                <td>{{bot.updatedAt | date: 'MM/dd/yyyy'}}</td>
+                <td>{{transaction.id}}</td>
+                <td>{{transaction.qty}}</td>
+                <td>{{transaction.total_cost | currency}}</td>
+                <td>{{transaction.status}}</td>
             </tr>
         </table>
     </div>
