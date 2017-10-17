@@ -5,7 +5,7 @@ box-sizing: border-box;
 }
 
 body {
-font-size: 16px;
+font-size: 20px;
 font-weight: 400;
 font-family: 'Open Sans', sans-serif;
 }
@@ -25,6 +25,8 @@ font-family: 'Open Sans', sans-serif;
 /* navbar */
 
 .customNav {
+    background-size: cover;
+    background-color: white;
     height: 150px;  
     /* padding-top: 36px;
     padding-left: 30px;  */
@@ -33,11 +35,11 @@ font-family: 'Open Sans', sans-serif;
   
   .customNavItems a {
     display: inline;
-    color: rgb(11, 10, 105);
+    color: rgb(19, 84, 114);
     padding: 0 20px;
     font-size: 20px;
-    font-weight: 600;
-    cursor: pointer;
+    font-weight: bold;
+    text-shadow: -1px -1px 0px rgba(255, 255, 255, 0.3), 1px 1px 0px rgba(0, 0, 0, 0.8);
   }
   
   .customNavItems a:hover {
@@ -51,7 +53,6 @@ font-family: 'Open Sans', sans-serif;
 
   /* logo */
 .logo {
-  background: url("images/robologo.png") no-repeat;
   height: 100px;
   width: auto;
   margin: 20px 0 0 30px;
@@ -72,7 +73,7 @@ font-family: 'Open Sans', sans-serif;
 }
 
 .card-header {
-max-width: 600px;
+max-width: 400px;
 padding: .75rem 1.25rem;
 margin: 0 auto;
 margin-bottom: 0;
@@ -114,12 +115,13 @@ padding: 1.25rem;
 }
 
 .overlay {
-  background: rgba(0, 0, 0, .5)
+  background: rgba(0, 0, 0, .5);
+  height: 1080px;
 }
 
 .customerInfo {
   font-size: 16px;
-  color: red;
+  margin-bottom: 100px;
 }
 
 .orderTxt {
@@ -131,11 +133,33 @@ padding: 1.25rem;
   padding: 100px 0 0 0;
 }
 
-.company1 {
-  font-size: 50px;
-  /* padding: 30px 0 0 450px; */
+.heading {
+ margin: 0 auto;
+ padding: 30px;
+ font-size: 50px;
+ color: rgb(43, 124, 158);
+ letter-spacing: .15em;
+ font-weight: bold;
+ 
+ text-shadow: 
+   -1px 0 lightgray, 0 1px lightgray, 1px 0 lightgray, 0 -1px lightgray,
+   1px -1px 0 #767676, 
+   -1px 2px 1px #737272, 
+   -2px 4px 1px #767474, 
+   -3px 6px 1px #787777, 
+   -4px 8px 1px #7b7a7a, 
+   -5px 10px 1px #7f7d7d, 
+   -6px 12px 1px #828181, 
+   -7px 14px 1px #868585, 
+   -8px 16px 1px #8b8a89, 
+   -9px 18px 1px #8f8e8d, 
+   -10px 20px 1px #949392, 
+   -11px 22px 1px #999897, 
+   -12px 24px 1px #9e9c9c;
+
 }
 
-.company2 {
-  /* padding: 0 0 0 550px; */
+.content{
+  padding: 0 400px;
+  padding-top: 50px;
 }

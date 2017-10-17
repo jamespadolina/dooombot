@@ -1,0 +1,19 @@
+<div class="overlay content container-fluid">
+    < <h3 class="text-center" style="color: rgb(255, 240, 240);font-weight:bold">Bots Ordered</h3>
+        <table ng-repeat="bot in botList" class="table table-dark">
+            <thead>
+                <tr style="color: white">
+                    <th>Bot Id</th>
+                    <th>Sale Id</th>
+                    <th>Bot Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table table-inverse">
+                    <td>{{bot.id}}</td>
+                    <td>{{bot.saleID}}</td>
+                    <td>{{bot.name}}</td>
+                </tr>
+            </tbody>
+        </table>
+</div>

@@ -1,7 +1,13 @@
 angular
     .module("doomBotApp")
-    .controller("checkOrderController", function ($scope, $stateParams, checkOrderService, userService, salesService) {
+    .controller("checkOrderController", function ($scope, $state, $stateParams, checkOrderService, userService, salesService) {
 
+        $scope.userinfo = true;
+        $scope.updateform = false;
+        $scope.saleinfo = true;
+        $scope.updatesale = false;
+        $scope.savebtn = false;
+        $scope.savesalebtn = false;
         $scope.userID = $stateParams.id;
         console.log($scope.userID);
 
@@ -36,7 +42,34 @@ angular
             }, function(error) {
                 console.log(error);
             })
-
         
+        $scope.updateUser = function() {
+            $scope.userinfo = false;
+            $scope.updateform = true;
+            $scope.savebtn = true;
+        }
+
+        $scope.updateSale = function() {
+            $scope.saleinfo = false;
+            $scope.updatesale = true;
+            $scope.savesalebtn = true;
+        }
+
+        $scope.saveUser = function(user) {
+            userService.updateUser(user);
+            $scope.userinfo = true;
+            $scope.updateform = false;
+            $scope.savebtn = false;
+        }
+        $scope.saveSale = function(sale) {
+            salesService.updateSale(sale);
+            $scope.saleinfo = true;
+            $scope.updatesale = false;
+            $scope.savesalebtn = false;
+        }
+
+        $scope.botList = function(transaction) {
+            $state.go("app.single", {id: transaction.id})
+        }
 
     })

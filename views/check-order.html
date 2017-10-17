@@ -1,38 +1,50 @@
-<!-- need to make another almost identicle order page that will show all the orders for this particular customer/ or use this page and make a second
-page that displays all their past orders.
-overall orders (order number, order date, shipping date) 
-individual orders (order number, bot ordered, quantity ordered, order date, ship date, shipping status ) -->
-<div class="container">
-    <div class="overlay">
-        <div ng-repeat="user in users" ng-if="user.id == userID" class="customerInfo col-md-6" style="color: white; font-weight: bold">
-            <p>First Name: {{user.firstName}}</p>
-            <input class="form-control" ng-model="user.firstName" />
-            <p>Last Name: {{user.lastName}}</p>
-            <input class="form-control" ng-model="user.lastName" />
-            <p>Address: {{user.address1}}</p>
-            <input class="form-control" ng-model="user.address1" />
-            <p>Address: {{user.address2}}</p>
-            <input class="form-control" ng-model="user.address2" />
-            <p>Email: {{user.emailAddress}}</p>
-            <input class="form-control" ng-model="user.emailAddress" />
-            <button class="btn btn-sm btn-primary">Update</button>
-            <button class="btn btn-sm btn-info">Save</button>
-        </div>
+<div class="content container-fluid overlay">
+    <div ng-repeat="user in users" ng-if="user.id == userID" class="customerInfo col-md-12 text-center" style="color: white; font-weight: bold">
+        <p ng-show="userinfo">First Name: {{user.firstName}}</p>
+        <label ng-show="updateform">First Name</label>
+        <input ng-show="updateform" class="form-control" ng-model="user.firstName" />
+        <p ng-show="userinfo">Last Name: {{user.lastName}}</p>
+        <label ng-show="updateform">Last Name</label>
+        <input ng-show="updateform" class="form-control" ng-model="user.lastName" />
+        <label ng-show="updateform">Address</label>
+        <p ng-show="userinfo">Address: {{user.address1}}</p>
+        <input ng-show="updateform" class="form-control" ng-model="user.address1" />
+        <p ng-show="userinfo">City, State, Zip: {{user.address2}}</p>
+        <label ng-show="updateform">City, State, Zip</label>
+        <input ng-show="updateform" class="form-control" ng-model="user.address2" />
+        <label ng-show="updateform">Email</label>
+        <p ng-show="userinfo">Email: {{user.emailAddress}}</p>
+        <input ng-show="updateform" class="form-control" ng-model="user.emailAddress" />
+        <button class="btn btn-sm btn-primary" ng-click="updateUser()">Update</button>
+        <button ng-show="savebtn" class="btn btn-sm btn-info" ng-click="saveUser(user)">Save</button>
+    </div>
 
-        <table ng-repeat="transaction in transactions" class="orderTxt pull-right" style="width:50%">
-            <tr>
+    <h3 class="text-center" style="color: rgb(255, 240, 240);font-weight:bold">Customer Transactions</h3>
+    <div ng-repeat="transaction in transactions">
+    <table class="table table-dark">
+        <thead>
+            <tr style="color: white">
                 <th>Order Id</th>
                 <th>Quantity</th>
                 <th>Total Cost</th>
                 <th>Shipping Status</th>
             </tr>
-
-            <tr>
-                <td>{{transaction.id}}</td>
-                <td>{{transaction.qty}}</td>
-                <td>{{transaction.total_cost | currency}}</td>
-                <td>{{transaction.status}}</td>
+        </thead>
+        <tbody>
+            <tr class="table table-inverse">
+                <td ng-click="botList(transaction)">{{transaction.id}}</td>
+                <td ng-show="saleinfo" >{{transaction.qty}}</td>
+                <td ng-show="updatesale"><input class="form-control" ng-model="transaction.qty" /></td>
+                <td ng-show="saleinfo" >{{transaction.total_cost | currency}}</td>
+                <td ng-show="updatesale" ><input class="form-control" ng-model="transaction.total_cost" /></td>
+                <td ng-show="saleinfo" >{{transaction.status}}</td>
+                <td ng-show="updatesale" ><input class="form-control" ng-model="transaction.status" /></td
             </tr>
-        </table>
+            
+        </tbody>
+        
+    </table>
+    <button class="btn btn-sm btn-primary" ng-click="updateSale()">Update</button>
+    <button ng-show="savesalebtn" class="btn btn-sm btn-info" ng-click="saveSale(transaction)">Save</button>
     </div>
 </div>

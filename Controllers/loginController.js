@@ -2,6 +2,9 @@ angular
   .module("doomBotApp")
   .controller("loginController", function ($scope, $state, userService) {
 
+    $scope.warning = false;
+    
+
     userService.getUsers()
       .then(function (response) {
         $scope.users = response.data;
@@ -14,14 +17,15 @@ angular
 
       if (!$scope.username || !$scope.password) {
 
-        console.log("Username or password is empty");
+        $scope.warning = true;
       }
       else if ($scope.username == "admin" && $scope.password == "admin") {
       $state.transitionTo("app.sales", null, {reload: true});
+      userService.setCurrentUser();
       }
 
       else {
-
+        $scope.warning = true;
       }
 
     }
