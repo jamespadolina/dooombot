@@ -166,6 +166,10 @@ padding: 1.25rem;
   padding-top: 50px;
 }
 
+/* Create Page */
+.input-group {
+  margin-bottom: 50px;
+} 
 /* store */
 
 .row > .column {

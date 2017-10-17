@@ -1,0 +1,22 @@
+<div style="font-weight:bold; color: white"class="content overlay container-fluid">
+    <div class="left col-md-6">
+    <h1>User Profile</h1>
+    <p><strong>First Name: </strong> {{currentUser.firstName}}</p>
+    <p><strong>Middle Name: </strong> {{currentUser.middleName}}</p>
+    <p><strong>Last Name: </strong> {{currentUser.lastName}}</p>
+    <p><strong>Address: </strong> {{currentUser.address1}}</p>
+    <p><strong>City, State, Zip: </strong> {{currentUser.address2}}</p>
+    <p><strong>Date of Birth: </strong> {{currentUser.dob | date: "MM/dd/yyyy"}}</p>
+    <p><strong>Email Address: </strong> {{currentUser.emailAddress}}</p>
+    <p><strong>Username: </strong> {{currentUser.username}}</p>
+    <p><strong>Password: </strong> {{currentUser.password}}</p>
+
+    <button class="btn btn-md btn-primary" ui-sref="app.editProfile({id: currentUser.id})">Update</button>
+
+    </div>
+
+    <div class="right col-md-6">
+        <button class="btn btn-lg btn-danger">Pre-Order Your Robot Today!</button>
+    </div>
+
+</div>

@@ -6,16 +6,22 @@
             <a ui-sref="app.about">About</a>
         </li>
         <li>
+            <a ng-if="admin == true" ui-sref="app.sales">Sales</a>
+        </li>
+        <li>
             <a ui-sref="app.store">Store</a>
         </li>
         <li>
             <a ng-if="currentUser == true" ui-sref="app.sales">Sales</a>
         </li>
         <li>
-            <a ui-sref="app.login" ng-if="currentUser == false">Login</a>
+            <a ng-if="currentUser != null" ng-click="viewProfile">Profile</a>
         </li>
         <li>
-            <a ng-click="logout()" ng-if="currentUser == true">Logout</a>
+            <a ui-sref="app.login" ng-if="currentUser == null && admin == false">Login</a>
+        </li>
+        <li>
+            <a ng-click="logout()" ng-if="currentUser != null || admin == true">Logout</a>
         </li>
     </ul>
     <div class="text-center">
