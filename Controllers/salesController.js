@@ -30,4 +30,21 @@ $scope.goToUser = function(userID) {
   $state.go("app.showCustomer", {id: userID})
 }
 
+// highchart
+Highcharts.chart('container', {
+  title: {
+    text: 'October Sales'
+  },
+
+  xAxis: {
+    categories: ['wk 1', 'wk 2', 'wk 3', 'wk 4'
+    ]
+  },
+
+  series: [{
+    data: [1, 3 ,2, 4]
+  }]
+});
+           
+
 })
