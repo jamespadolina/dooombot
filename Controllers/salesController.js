@@ -31,7 +31,7 @@ $scope.goToUser = function(userID) {
 }
 
 // highchart
-Highcharts.chart('container', {
+Highcharts.chart('highChart', {
   title: {
     text: 'October Sales'
   },
@@ -42,7 +42,7 @@ Highcharts.chart('container', {
   },
 
   series: [{
-    data: [1, 3 ,2, 4]
+    data: [1, 3 ,4 ]
   }]
 });
            
