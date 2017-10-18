@@ -1,5 +1,5 @@
 angular
   .module("doomBotApp")
-  .controller("checkOrderController", function ($scope, $state, userService) {
-    
+  .controller("storeController", function ($scope, $state, userService) {
+
   })
