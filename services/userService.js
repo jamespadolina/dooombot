@@ -25,8 +25,8 @@ angular
 
     this.getUsers = function() {
       return $http.get(`http://192.168.7.75:3000/users`);
-      // return $http.get('http://192.168.120.7:3000/users');
-    }
+      //  return $http.get('http://192.168.120.7:3000/users');
+  }
 
     this.createUser = function(user) {
       return $http.post(`http://192.168.7.75:3000/users`, user);
@@ -34,8 +34,8 @@ angular
     }
 
     this.updateUser = function(user) {
-      // $http.put(`http://192.168.120.7:3000/users/${user.id}`, user);
-      $http.put(`http://192.168.7.75:3000/users/${user.id}`, user);
+      $http.put(`http://192.168.120.7:3000/users/${user.id}`, user);
+      // $http.put(`http://192.168.7.75:3000/users/${user.id}`, user);
     }
 
     this.logout = function () {
